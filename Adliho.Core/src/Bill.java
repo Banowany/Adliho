@@ -2,7 +2,7 @@ import java.util.HashMap;
 
 public class Bill
 {
-    HashMap<String, Money> whoAndHowManyPaid;
+    private final HashMap<String, Money> whoAndHowManyPaid;
 
     public Bill()
     {

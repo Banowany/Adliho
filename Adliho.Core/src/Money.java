@@ -1,10 +1,11 @@
 public class Money
 {
-    int buck;
-    int pennis;
+    private final int buck;
+    private final int pennis;
 
     public Money(int buck, int pennis)
     {
+        //TODO: check correction of arguments in constructor
         this.buck = buck;
         this.pennis = pennis;
     }
