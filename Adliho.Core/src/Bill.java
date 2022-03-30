@@ -1,8 +1,9 @@
 import java.util.HashMap;
+import java.util.Map;
 
 public class Bill
 {
-    private final HashMap<String, Money> whoAndHowManyPaid;
+    private final Map<String, Money> whoAndHowManyPaid;
 
     public Bill()
     {
