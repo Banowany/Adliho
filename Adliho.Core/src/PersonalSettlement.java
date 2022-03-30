@@ -1,5 +1,7 @@
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class PersonalSettlement
 {
@@ -24,5 +26,10 @@ public class PersonalSettlement
             throw new IllegalStateException("This collector is already exist in PersonalSettlement.");
 
         howManyToBackAndToWhom.put(name, howManyToBack);
+    }
+
+    public Map<String,Money> getExtract()
+    {
+        return Collections.unmodifiableMap(howManyToBackAndToWhom);
     }
 }
