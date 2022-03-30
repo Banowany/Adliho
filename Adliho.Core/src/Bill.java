@@ -1,3 +1,4 @@
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -20,5 +21,10 @@ public class Bill
             throw new IllegalStateException("This person is already exist in Bill");
 
         whoAndHowManyPaid.put(who, howManyPaid);
+    }
+
+    public Map getExtractFromBill()
+    {
+        return Collections.unmodifiableMap(whoAndHowManyPaid);
     }
 }
