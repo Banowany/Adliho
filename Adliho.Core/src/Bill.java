@@ -11,19 +11,19 @@ public class Bill
         this.whoAndHowManyPaid = new HashMap<>();
     }
 
-    public void addPersonToBill(String who, Money howManyPaid)
+    public void addPersonToBill(String name, Money howManyPaid)
     {
-        if(who==null)
+        if(name==null)
             throw new NullPointerException("Peson can not be null");
         if(howManyPaid==null)
             throw new NullPointerException("Money can not be null");
-        if(whoAndHowManyPaid.containsKey(who))
+        if(whoAndHowManyPaid.containsKey(name))
             throw new IllegalStateException("This person is already exist in Bill");
 
-        whoAndHowManyPaid.put(who, howManyPaid);
+        whoAndHowManyPaid.put(name, howManyPaid);
     }
 
-    public Map getExtractFromBill()
+    public Map<String, Money> getExtractFromBill()
     {
         return Collections.unmodifiableMap(whoAndHowManyPaid);
     }
