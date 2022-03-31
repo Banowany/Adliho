@@ -32,4 +32,9 @@ public class PersonalSettlement
     {
         return Collections.unmodifiableMap(howManyToBackAndToWhom);
     }
+
+    public String getWho()
+    {
+        return who;
+    }
 }
