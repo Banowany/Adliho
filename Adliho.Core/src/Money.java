@@ -10,6 +10,11 @@ public class Money
         this.pennis = pennis;
     }
 
+    public int getMoneyInPennis()
+    {
+        return buck*100+pennis;
+    }
+
     @Override
     public String toString()
     {
