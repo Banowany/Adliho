@@ -63,4 +63,19 @@ public class BillParameters
         billParameters.findAndSetNonLossyPeopleWithTheirDept(bill.getExtractFromBill());
         return billParameters;
     }
+
+    public Money getAverageAmount()
+    {
+        return averageAmount;
+    }
+
+    public Map<String, Money> getLossyPeopleWithTheirLoss()
+    {
+        return Collections.unmodifiableMap(lossyPeopleWithTheirLoss);
+    }
+
+    public Map<String, Money> getNonLossyPeopleWithTheirDept()
+    {
+        return Collections.unmodifiableMap(nonLossyPeopleWithTheirDept);
+    }
 }
